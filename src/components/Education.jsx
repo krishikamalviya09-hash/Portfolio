@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export default function Education() {
   const education = [
-    {title: "Secondary Education",
-      place: "Merit Higher Secondary School, Indore",
-      year: "2018",
-     
+    {
+      title: "Bachelor of Computer Application",
+      place: "Government Holkar Science College, Indore",
+      year: "2020 – 2023",
     },
     {
       title: "Intermediate - PCM",
@@ -13,10 +13,9 @@ export default function Education() {
       year: "2020",
     },
     {
-      
-       title: "Bachelor of Computer Application",
-      place: "Government Holkar Science College, Indore",
-      year: "2020 – 2023",
+      title: "Secondary Education",
+      place: "Merit Higher Secondary School, Indore",
+      year: "2018",
     },
   ];
 
@@ -27,15 +26,16 @@ export default function Education() {
         Education
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      {/* Single Column Layout */}
+      <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
         {education.map((edu, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.2 }}
-            className="p-6 bg-gray-800/60 backdrop-blur-lg rounded-xl 
-                       shadow-lg border border-gray-700 hover:border-purple-500 
+            className="p-6 bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg 
+                       border border-gray-700 hover:border-purple-500 
                        hover:scale-105 transition"
           >
             <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">

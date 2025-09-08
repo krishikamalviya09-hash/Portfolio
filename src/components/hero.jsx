@@ -18,8 +18,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className="mt-4 text-lg text-gray-400">
-          A passionate MERN Stack Developer creating modern, responsive, and scalable web applications.
-        </p>
+I am a dedicated Full Stack Developer specializing in the MERN stack, building responsive and scalable web applications. I love solving complex problems, writing clean code, and creating engaging user experiences. Continuously learning, I strive to bring modern, efficient solutions to every project I work on.        </p>
         <div className="mt-6 flex space-x-4">
           <a
             href="/resume.pdf"
