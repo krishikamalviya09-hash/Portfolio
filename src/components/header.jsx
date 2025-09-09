@@ -1,7 +1,10 @@
+import { useState } from "react";
+
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="bg-gray-900 px-8 py-6 flex justify-between items-center shadow-md">
-      {/* Logo / Name */}
+    <header className="bg-gray-900 px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
       {/* Logo / Name */}
       <div className="flex items-center space-x-3">
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center text-white font-bold">
@@ -15,8 +18,23 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Hamburger Menu for Mobile */}
+      <button
+        className="md:hidden text-gray-300 focus:outline-none"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
+
       {/* Navbar Links */}
-      <nav className="space-x-6 text-gray-300 font-medium">
+      <nav
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } md:flex space-x-6 text-gray-300 font-medium`}
+        role="navigation"
+        aria-label="Main Navigation"
+      >
         <a href="#about" className="hover:text-purple-400 transition">About</a>
         <a href="#skills" className="hover:text-purple-400 transition">Skills</a>
         <a href="#experience" className="hover:text-purple-400 transition">Experience</a>
