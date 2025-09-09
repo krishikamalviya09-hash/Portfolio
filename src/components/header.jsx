@@ -2,9 +2,18 @@ export default function Header() {
   return (
     <header className="bg-gray-900 px-8 py-6 flex justify-between items-center shadow-md">
       {/* Logo / Name */}
-      <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
-        Krishika Malviya
-      </h1>
+      {/* Logo / Name */}
+      <div className="flex items-center space-x-3">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center text-white font-bold">
+          K
+        </div>
+        <div>
+          <h1 className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+            Krishika Malviya
+          </h1>
+          <p className="text-sm text-gray-100">MERN Stack Developer</p>
+        </div>
+      </div>
 
       {/* Navbar Links */}
       <nav className="space-x-6 text-gray-300 font-medium">
