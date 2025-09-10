@@ -29,22 +29,41 @@ img {
   box-sizing: border-box;
 }
 
-/* Custom scrollbar for webkit browsers */
-::-webkit-scrollbar {
-  width: 8px;
+/* Hide scrollbar on mobile devices */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* For IE and Edge */
+  body {
+    -ms-overflow-style: none;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #1f2937;
-}
+/* Custom scrollbar for desktop browsers */
+@media (min-width: 769px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #ec4899, #8b5cf6);
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #db2777, #7c3aed);
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ec4899, #8b5cf6);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #db2777, #7c3aed);
+  }
 }
 
 .logo {
