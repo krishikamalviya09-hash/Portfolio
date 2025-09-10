@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-  <div className="font-sans bg-gray-900 text-white w-full">
+  <div className="font-sans bg-gray-900 text-white w-full min-h-screen overflow-x-hidden">
       <Header />
       <Hero/>
       <About />
